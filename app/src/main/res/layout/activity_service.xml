@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceActivity">
+
+    <Button
+        android:id="@+id/startService"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="onClickStartService"
+        android:text="@string/start"
+        tools:text="СТАРТ" />
+
+    <Button
+        android:id="@+id/stopService"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/startService"
+        android:layout_marginEnd="60dp"
+        android:background="@color/colorAccent"
+        android:onClick="onClickStopService"
+        android:text="@string/stop"
+        tools:text="СТОП" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:text="@string/parse_data_every"
+        android:textSize="18sp"
+        tools:text="Задайте интервал" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/parsingInterval"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="144dp"
+        android:text="@string/seconds"
+        android:textSize="18sp"
+        tools:text="sec" />
+
+    <EditText
+        android:id="@+id/parsingInterval"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="137dp"
+        android:autofillHints="15"
+        android:ems="10"
+        android:inputType="number" />
+
+</RelativeLayout>

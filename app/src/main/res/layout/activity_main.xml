@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/parseDataText"
+        android:layout_width="350dp"
+        android:layout_height="393dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/parseData"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/parseDataText"
+        android:layout_marginTop="17dp"
+        android:background="#08691a"
+        android:text="@string/parse"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="419dp"
+        tools:text="Старт" />
+
+    <Button
+        android:id="@+id/showData"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/parseDataText"
+        android:layout_marginTop="76dp"
+        android:background="@color/colorAccent"
+        android:text="@string/db"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="419dp"
+        tools:text="Содержимое БД" />
+
+    <TextView
+        android:id="@+id/parsingCity"
+        android:layout_width="180dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/parseData"
+        android:layout_marginEnd="29dp"
+        android:text="Omsk"
+        android:textSize="24sp" />
+
+</RelativeLayout>
