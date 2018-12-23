@@ -26,11 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
     private TextView parseDataText;
-    private TextView parsingCity;
     private Button parseData;
     private Button showDB;
     public static SQLiteDatabase db;
-    public static String url = "https://api.apixu.com/v1/forecast.json?key=133c08ba181244bf928111545181210&q=" + parsingCity.getText().toString() + "&days="+3;
+    public static String url = "https://api.apixu.com/v1/forecast.json?key=133c08ba181244bf928111545181210&q=Praga&days="+3;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         parseDataText = findViewById(R.id.parseDataText);
-        parsingCity = findViewById(R.id.parsingCity);
         parseData = findViewById(R.id.parseData);
         showDB = findViewById(R.id.showData);
         requestQueue = Volley.newRequestQueue(this);
