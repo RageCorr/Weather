@@ -8,10 +8,10 @@
     <TextView
         android:id="@+id/parseDataText"
         android:layout_width="350dp"
-        android:layout_height="393dp"
+        android:layout_height="276dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_alignParentStart="true"
+        android:textSize="12sp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -19,8 +19,8 @@
         android:id="@+id/parseData"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/showData"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/parseDataText"
         android:layout_marginTop="17dp"
         android:background="#08691a"
         android:text="@string/parse"
@@ -32,13 +32,23 @@
         android:id="@+id/showData"
         android:layout_width="139dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/parseDataText"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="119dp"
         android:background="@color/colorAccent"
         android:text="@string/db"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="419dp"
         tools:text="Содержимое БД" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="203dp"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/parseData"
+        android:layout_marginTop="78dp"
+        android:text="Введите название города" />
 
 </RelativeLayout>

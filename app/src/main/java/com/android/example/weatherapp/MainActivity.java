@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private RequestQueue requestQueue;
     private TextView parseDataText;
     private Button parseData;
+    private TextView parsingCity;
     private Button showDB;
     public static SQLiteDatabase db;
-    public static String url = "https://api.apixu.com/v1/forecast.json?key=133c08ba181244bf928111545181210&q=Praga&days="+3;
-
+    public static String url = "https://api.apixu.com/v1/forecast.json?key=133c08ba181244bf928111545181210&q=" + parsingCity.getText().toString() + "&days="+3;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         parseDataText = findViewById(R.id.parseDataText);
+        parsingCity = findViewById(R.id.parsingCity);
         parseData = findViewById(R.id.parseData);
         showDB = findViewById(R.id.showData);
         requestQueue = Volley.newRequestQueue(this);
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 parseDataText.setText("");
-                //Cursor query = db.rawQuery("SELECT * FROM weather LIMIT 3, (SELECT COUNT(*) FROM weather)-3;", null);
+
                 Cursor query = db.rawQuery("SELECT * FROM weather", null);
                 int querySize = query.getCount() - 3;
                 query = db.rawQuery("SELECT * FROM weather LIMIT "+ querySize +", 3", null);
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 query.close();
             }
         });
-        //db.close();
+
     }
 
 }
